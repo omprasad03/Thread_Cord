@@ -13,6 +13,25 @@ export const metadata: Metadata = {
   description: "",
 };
 
+// export default function RootLayout({
+//   children,
+// }: {
+//   children: React.ReactNode;
+// }) {
+//   return (
+//     <ClerkProvider
+//       appearance={{
+//         baseTheme: dark,
+//       }}
+//     >
+//       <html lang='en'>
+//         <body className={`${inter.className} bg-dark-1`}>{children}</body>
+//       </html>
+//     </ClerkProvider>
+//   );
+// }
+
+
 export default function RootLayout({
   children,
 }: {
@@ -25,8 +44,14 @@ export default function RootLayout({
       }}
     >
       <html lang='en'>
-        <body className={`${inter.className} bg-dark-1`}>{children}</body>
+        <body
+          className={`${inter.className} bg-dark-1`}
+          style={{ background: "linear-gradient(to right, #333333, #555555)" }}
+        >
+          {children}
+        </body>
       </html>
     </ClerkProvider>
   );
 }
+
